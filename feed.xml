@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Mr Tux</title>
+<link>https://alexbonnamain.github.io/</link>
+<description>Tecnologia, IA, cibercultura, filosofia e outras inquietações.</description>
+<language>pt-BR</language>
+<lastBuildDate>Thu, 08 Oct 2026 21:08:45 GMT</lastBuildDate>
+
+<item>
+<title>Seu computador ainda é seu?</title>
+<link>https://alexbonnamain.github.io/artigos/seu-computador-ainda-e-seu-01/seu-computador-ainda-e-seu-01.html</link>
+<guid isPermaLink="true">https://alexbonnamain.github.io/artigos/seu-computador-ainda-e-seu-01/seu-computador-ainda-e-seu-01.html</guid>
+<pubDate>Thu, 08 Oct 2026 21:08:45 GMT</pubDate>
+<description>Um computador pode continuar funcionando perfeitamente e, mesmo assim, ser considerado velho. Quem decide quando uma máquina chegou ao fim da vida útil?</description>
+</item>
+
+</channel>
+</rss>

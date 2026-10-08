@@ -1,0 +1,64 @@
+Mr Tux — verificação técnica de pré-publicação
+Data: 08/10/2026
+Destino assumido: https://alexbonnamain.github.io/
+
+RESULTADO
+OK — verificações locais concluídas sem erros.
+
+CORREÇÕES PRINCIPAIS
+- Corrigido o redimensionamento da imagem Toshiba.
+  - arquivo real: 800 × 599 px
+  - apresentação desktop: máximo de 500 px
+  - telas menores: largura responsiva até 100% do contêiner
+  - proporção preservada com height: auto
+- Corrigida a capa do artigo para usar class="article-cover".
+- Corrigidas dimensões HTML da capa para 1672 × 941 px.
+- Criado 01.webp otimizado e mantido 01.png como fallback.
+- Corrigida a imagem da página Sobre para dimensões intrínsecas 1122 × 1402 px.
+- Criado alexandre-mr-tux.webp otimizado e mantido PNG como fallback.
+- Removido uso de :has() do bloco de imagens do artigo.
+- Consolidado o CSS de imagens, legendas e créditos sem regras conflitantes no nível principal.
+- Corrigido o logo quebrado da página Softwares.
+- Criado favicon.svg que era referenciado pelo site e não existia no ZIP original.
+- Corrigido 404 para usar caminhos absolutos de raiz, evitando quebra de CSS em URLs inexistentes aninhadas.
+- Atualizado feed.xml com o artigo 01.
+- Adicionados canonical, Open Graph e Twitter Card nas páginas públicas.
+- Adicionados robots.txt e sitemap.xml.
+- Incluído .nojekyll para publicação estática direta no GitHub Pages.
+- Adicionados links de fontes oficiais em “Notas e verificações”.
+
+VALIDAÇÕES AUTOMATIZADAS
+- Referências locais quebradas: 0
+- IDs HTML duplicados: 0
+- Imagens sem alt: 0
+- Links externos sem target="_blank": 0
+- Links externos sem rel="noopener noreferrer": 0
+- Sintaxe Markdown acidental em href/src/srcset: 0
+- Erros de parsing CSS via tinycss2: 0
+- Erros estruturais de parsing HTML via lxml: 0
+- feed.xml: XML válido
+- sitemap.xml: XML válido
+
+TESTE DE LAYOUT EM CHROMIUM
+Teste autocontido com o HTML real e os CSS reais do pacote.
+
+Desktop — viewport 1440 px:
+- largura total da página: 1440 px
+- overflow horizontal: nenhum
+- capa: 1040 px
+- imagem Toshiba: 500 px
+
+Mobile — viewport 390 px:
+- largura total da página: 390 px
+- overflow horizontal: nenhum
+- capa: 366 px
+- imagem Toshiba: 366 px
+
+OTIMIZAÇÃO DE IMAGENS
+- capa PNG: 1.609.406 bytes
+- capa WebP: 62.948 bytes
+- foto Sobre PNG: 2.726.539 bytes
+- foto Sobre WebP: 217.088 bytes
+
+OBSERVAÇÃO NÃO TÉCNICA
+A imagem 02.webp foi mantida porque já fazia parte do projeto. O crédito aponta para a Hackaday, mas atribuição não equivale automaticamente a licença de republicação. Confirme a autorização/licença ou substitua essa imagem se quiser eliminar esse risco antes da publicação.

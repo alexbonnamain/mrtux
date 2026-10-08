@@ -1,0 +1,657 @@
+/*
+Mr Tux_
+article.css
+
+Padrão visual de todos os artigos.
+
+Fundo escuro contínuo.
+Sem caixas claras.
+*/
+
+
+/* ==========================================================
+VARIÁVEIS
+========================================================== */
+
+:root {
+--article-text: var(--text);
+--article-muted: var(--text-muted);
+--article-soft: var(--text-soft);
+--article-border: var(--border);
+--article-accent: var(--terminal-green);
+--article-accent-soft: var(--terminal-green-soft);
+--article-code-background: #0d0f10;
+}
+
+
+/* ==========================================================
+ESTRUTURA
+========================================================== */
+
+.article-shell {
+width: min(calc(100% - 48px), 1180px);
+margin: 58px auto 90px;
+color: var(--article-text);
+}
+
+
+/* ==========================================================
+CABEÇALHO DO ARTIGO
+========================================================== */
+
+.article-header {
+width: min(100%, 960px);
+padding: 0 0 38px;
+}
+
+.article-title {
+max-width: 920px;
+margin: 0;
+color: var(--article-text);
+font-family: var(--font-reading);
+font-size: clamp(2.2rem, 4vw, 3.35rem);
+font-weight: 500;
+line-height: 1.04;
+letter-spacing: -0.04em;
+text-wrap: balance;
+}
+
+.article-description {
+max-width: 860px;
+margin: 24px 0 0;
+color: var(--article-soft);
+font-family: var(--font-reading);
+font-size: clamp(1.12rem, 1.8vw, 1.28rem);
+line-height: 1.65;
+}
+
+.article-date {
+margin: 22px 0 0;
+color: var(--terminal-green);
+font-family: var(--font-mono);
+font-size: 0.8rem;
+line-height: 1.4;
+letter-spacing: 0.03em;
+}
+
+
+/* ==========================================================
+CAPA PRINCIPAL
+========================================================== */
+
+.article-cover {
+width: min(100%, 1040px);
+margin: 40px auto 0;
+padding: 0;
+}
+
+.article-cover picture {
+display: block;
+}
+
+.article-cover img {
+display: block;
+width: 100%;
+height: auto;
+margin: 0;
+border: 1px solid var(--article-border);
+}
+
+
+/* ==========================================================
+CORPO DO ARTIGO
+========================================================== */
+
+.article-content {
+width: min(100%, 1040px);
+margin: 0;
+padding: 52px 0 20px;
+color: var(--article-text);
+font-family: var(--font-reading);
+font-size: 1.1rem;
+line-height: 1.82;
+}
+
+.article-content p {
+margin: 0 0 1.45em;
+}
+
+.article-content section {
+margin: 0;
+padding: 0;
+}
+
+
+/* ==========================================================
+TÍTULOS INTERNOS
+========================================================== */
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+color: var(--article-text);
+font-family: var(--font-reading);
+text-wrap: balance;
+}
+
+.article-content h2 {
+margin: 2.35em 0 0.8em;
+font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+font-weight: 600;
+line-height: 1.16;
+letter-spacing: -0.025em;
+}
+
+.article-content h3 {
+margin: 2em 0 0.7em;
+font-size: clamp(1.35rem, 2.8vw, 1.8rem);
+font-weight: 600;
+line-height: 1.25;
+}
+
+.article-content h4 {
+margin: 1.7em 0 0.65em;
+font-size: 1.15rem;
+font-weight: 700;
+line-height: 1.35;
+}
+
+.article-content section:first-child h2:first-child {
+margin-top: 0;
+}
+
+
+/* ==========================================================
+LINKS E ÊNFASE
+========================================================== */
+
+.article-content a {
+color: var(--article-accent);
+text-decoration: underline;
+text-decoration-thickness: 1px;
+text-underline-offset: 0.2em;
+}
+
+.article-content a:hover,
+.article-content a:focus-visible {
+color: var(--article-accent-soft);
+}
+
+.article-content strong {
+color: var(--article-text);
+font-weight: 700;
+}
+
+.article-content em {
+font-style: italic;
+}
+
+
+/* ==========================================================
+LISTAS
+========================================================== */
+
+.article-content ul,
+.article-content ol {
+margin: 0 0 1.6em;
+padding-left: 1.7em;
+}
+
+.article-content li {
+margin: 0.45em 0;
+padding-left: 0.2em;
+}
+
+.article-content li::marker {
+color: var(--article-accent);
+}
+
+
+/* ==========================================================
+CITAÇÕES
+========================================================== */
+
+.article-content blockquote {
+margin: 2.2em 0;
+padding: 0.25em 0 0.25em 1.4em;
+border-left: 3px solid var(--article-accent);
+color: var(--article-soft);
+font-size: 1.17rem;
+line-height: 1.7;
+}
+
+.article-content blockquote p:last-child {
+margin-bottom: 0;
+}
+
+
+/* ==========================================================
+CÓDIGO E TECLAS
+========================================================== */
+
+.article-content code,
+.article-content kbd {
+font-family: var(--font-mono);
+font-size: 0.9em;
+}
+
+.article-content code {
+padding: 0.14em 0.34em;
+background: var(--background-soft);
+border: 1px solid var(--article-border);
+border-radius: 3px;
+}
+
+.article-content kbd {
+display: inline-block;
+padding: 0.1em 0.42em;
+background: var(--background-soft);
+border: 1px solid var(--article-border);
+border-bottom-width: 2px;
+border-radius: 4px;
+color: var(--article-text);
+}
+
+.article-content pre {
+max-width: 100%;
+margin: 2.2em 0;
+padding: 22px 24px;
+overflow-x: auto;
+background: var(--article-code-background);
+color: var(--article-text);
+border: 1px solid var(--article-border);
+line-height: 1.65;
+tab-size: 4;
+}
+
+.article-content pre code {
+display: block;
+min-width: max-content;
+padding: 0;
+background: transparent;
+border: 0;
+border-radius: 0;
+color: inherit;
+font-size: 0.92rem;
+}
+
+
+/* ==========================================================
+IMAGENS
+========================================================== */
+
+/* Figura padrão para imagens inseridas no corpo do texto. */
+.article-content figure {
+width: min(100%, 820px);
+margin: 2.8em auto;
+}
+
+/*
+Figura compacta.
+A classe controla o tamanho visual da imagem.
+Os atributos width/height do HTML mantêm as dimensões reais do arquivo.
+*/
+.article-content figure.article-figure--compact {
+width: min(100%, 500px);
+}
+
+.article-content figure img,
+.article-image {
+display: block;
+width: 100%;
+max-width: 100%;
+height: auto;
+margin: 0;
+}
+
+.article-content figure.image-wide {
+width: min(calc(100vw - 48px), 1040px);
+margin-left: 50%;
+transform: translateX(-50%);
+}
+
+.image-wide {
+width: 100%;
+max-width: 1040px;
+}
+
+
+/* ==========================================================
+SEPARADORES
+========================================================== */
+
+.article-content hr {
+margin: 3.4em 0;
+border: 0;
+}
+
+
+/* ==========================================================
+TABELAS
+========================================================== */
+
+.article-content .table-wrap {
+width: 100%;
+margin: 2.2em 0;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+.article-content table {
+width: 100%;
+min-width: 560px;
+border-collapse: collapse;
+font-family: var(--font-interface);
+font-size: 0.92rem;
+line-height: 1.55;
+}
+
+.article-content th,
+.article-content td {
+padding: 12px 14px;
+text-align: left;
+vertical-align: top;
+border-bottom: 1px solid var(--article-border);
+}
+
+.article-content th {
+color: var(--article-text);
+font-weight: 700;
+}
+
+.article-content tbody tr:last-child td {
+border-bottom: 0;
+}
+
+
+/* ==========================================================
+NOTAS E VERIFICAÇÕES
+========================================================== */
+
+.article-notes {
+margin-top: 4em;
+padding-top: 0;
+}
+
+.article-notes h2 {
+margin-top: 0;
+color: var(--terminal-green);
+font-family: var(--font-mono);
+font-size: 0.82rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+.article-notes p {
+color: var(--article-muted);
+font-family: var(--font-interface);
+font-size: 0.92rem;
+line-height: 1.7;
+}
+
+
+/* ==========================================================
+AUTORIA
+========================================================== */
+
+.article-authorship {
+max-width: 920px;
+margin-top: 4.5em;
+padding: 26px 30px;
+background: var(--background-soft);
+border-left: 3px solid var(--terminal-green);
+}
+
+.article-authorship p {
+margin: 0;
+color: var(--article-soft);
+font-family: var(--font-interface);
+font-size: 0.92rem;
+line-height: 1.75;
+}
+
+.article-authorship p + p {
+margin-top: 22px;
+}
+
+.article-authorship p:first-child strong {
+color: var(--terminal-green);
+font-family: var(--font-mono);
+font-size: 0.86rem;
+font-weight: 600;
+letter-spacing: 0.03em;
+}
+
+.article-signature {
+max-width: 780px;
+color: var(--article-text);
+font-family: var(--font-reading);
+font-size: clamp(1.15rem, 2vw, 1.35rem);
+line-height: 1.55;
+}
+
+.article-signature strong {
+color: var(--article-text);
+font-weight: 600;
+}
+
+
+/* ==========================================================
+NAVEGAÇÃO
+========================================================== */
+
+.article-navigation {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+width: min(100%, 920px);
+margin: 46px 0 0;
+padding: 0;
+}
+
+.article-navigation a {
+color: var(--terminal-green);
+font-family: var(--font-mono);
+font-size: 0.85rem;
+font-weight: 500;
+line-height: 1.4;
+letter-spacing: 0.04em;
+text-decoration: none;
+}
+
+.article-navigation a:hover,
+.article-navigation a:focus-visible {
+color: var(--terminal-green-soft);
+}
+
+
+/* ==========================================================
+TABLETS
+========================================================== */
+
+@media (max-width: 760px) {
+
+.article-shell {
+width: calc(100% - 32px);
+margin: 42px auto 64px;
+}
+
+.article-header {
+padding-bottom: 30px;
+}
+
+.article-title {
+font-size: clamp(2.35rem, 10vw, 3.5rem);
+}
+
+.article-description {
+font-size: 1.06rem;
+}
+
+.article-cover {
+width: 100%;
+margin-top: 30px;
+}
+
+.article-content {
+padding-top: 40px;
+font-size: 1.03rem;
+line-height: 1.76;
+}
+
+.article-content figure {
+width: 100%;
+}
+
+.article-content figure.image-wide {
+width: 100%;
+margin-left: auto;
+transform: none;
+}
+
+.article-content pre {
+padding: 18px;
+}
+
+.article-authorship {
+padding: 22px 24px;
+}
+
+}
+
+
+/* ==========================================================
+CELULARES
+========================================================== */
+
+@media (max-width: 480px) {
+
+.article-shell {
+width: calc(100% - 24px);
+margin-top: 32px;
+}
+
+.article-title {
+font-size: clamp(2.15rem, 11vw, 3rem);
+line-height: 1.02;
+}
+
+.article-description {
+margin-top: 20px;
+font-size: 1rem;
+}
+
+.article-date {
+margin-top: 18px;
+}
+
+.article-content {
+padding-top: 32px;
+font-size: 1rem;
+}
+
+.article-content h2 {
+font-size: 1.75rem;
+}
+
+.article-authorship {
+margin-top: 3.5em;
+padding: 20px;
+}
+
+.article-authorship p {
+font-size: 0.88rem;
+}
+
+.article-signature {
+font-size: 1.12rem;
+}
+
+.article-navigation {
+margin-top: 38px;
+}
+
+}
+
+
+/* ==========================================================
+INÍCIO — LEGENDAS, CRÉDITOS E FONTES DAS IMAGENS
+========================================================== */
+
+
+/* ----------------------------------------------------------
+LEGENDA COM DESCRIÇÃO + FONTE
+---------------------------------------------------------- */
+
+figure > figcaption.image-caption {
+display: block;
+width: 100%;
+margin: 0;
+padding: 16px 0 0;
+text-align: center;
+}
+
+.image-caption-text {
+display: block;
+color: var(--article-text);
+font-family: var(--font-reading);
+font-size: 0.9rem;
+font-style: italic;
+line-height: 1.5;
+}
+
+.image-caption .image-credit {
+display: block;
+margin-top: 6px;
+color: var(--article-muted);
+font-family: var(--font-interface);
+font-size: 0.76rem;
+line-height: 1.5;
+}
+
+
+/* ----------------------------------------------------------
+CRÉDITO SIMPLES
+
+Exemplo:
+Imagem gerada com ChatGPT.
+
+ou:
+
+Fonte: Hackaday
+---------------------------------------------------------- */
+
+figure > figcaption.image-credit {
+display: block;
+width: 100%;
+margin: 0;
+padding: 16px 0 0;
+color: var(--article-muted);
+font-family: var(--font-interface);
+font-size: 0.76rem;
+line-height: 1.5;
+text-align: center;
+}
+
+
+/* ----------------------------------------------------------
+LINKS DAS FONTES
+---------------------------------------------------------- */
+
+figure .image-credit a {
+color: var(--article-accent);
+text-decoration: none;
+}
+
+figure .image-credit a:hover,
+figure .image-credit a:focus-visible {
+color: var(--article-accent-soft);
+text-decoration: underline;
+text-underline-offset: 0.2em;
+}
+
+
+/* ==========================================================
+FIM — LEGENDAS, CRÉDITOS E FONTES DAS IMAGENS
+========================================================== */

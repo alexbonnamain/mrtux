@@ -1,0 +1,244 @@
+/*
+Mr Tux_
+softwares.css
+
+Estilos específicos da página Softwares.
+*/
+
+
+/* ==========================================================
+LISTA DE SOFTWARES
+========================================================== */
+
+.software-list {
+width: 100%;
+border-top: 1px solid var(--border);
+}
+
+
+/* ==========================================================
+ITEM
+========================================================== */
+
+.software-item {
+display: grid;
+grid-template-columns: 76px minmax(0, 1fr);
+gap: 28px;
+padding: 32px 0;
+border-bottom: 1px solid var(--border);
+}
+
+
+/* ==========================================================
+LOGO
+========================================================== */
+
+.software-logo {
+width: 72px;
+height: 72px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.software-logo img {
+display: block;
+width: 72px;
+height: 72px;
+object-fit: contain;
+}
+
+
+/* ==========================================================
+CONTEÚDO
+========================================================== */
+
+.software-content {
+min-width: 0;
+}
+
+.software-header {
+margin: 0;
+}
+
+.software-header h2 {
+margin: 0;
+color: var(--text);
+font-family: var(--font-reading);
+font-size: 1.45rem;
+font-weight: 500;
+line-height: 1.3;
+}
+
+.software-description {
+max-width: 720px;
+margin: 8px 0 0;
+color: var(--text-muted);
+font-family: var(--font-reading);
+font-size: 1rem;
+line-height: 1.65;
+}
+
+
+/* ==========================================================
+POR QUE RECOMENDO
+========================================================== */
+
+.software-reason {
+max-width: 720px;
+margin-top: 22px;
+}
+
+.software-reason h3 {
+margin: 0 0 7px;
+color: var(--terminal-green);
+font-family: var(--font-mono);
+font-size: 0.8rem;
+font-weight: 500;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+
+.software-reason p {
+margin: 0;
+color: var(--text-soft);
+font-family: var(--font-reading);
+font-size: 1rem;
+line-height: 1.7;
+}
+
+
+/* ==========================================================
+PLATAFORMAS
+========================================================== */
+
+.software-platforms {
+margin: 18px 0 0;
+color: var(--text-muted);
+font-family: var(--font-mono);
+font-size: 0.78rem;
+line-height: 1.5;
+}
+
+
+/* ==========================================================
+LINKS
+========================================================== */
+
+.software-links {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 12px 28px;
+margin-top: 18px;
+}
+
+.software-links a {
+display: inline-flex;
+align-items: center;
+gap: 7px;
+color: var(--terminal-green);
+font-family: var(--font-mono);
+font-size: 0.82rem;
+font-weight: 500;
+line-height: 1.4;
+text-decoration: none;
+transition: color 140ms ease;
+}
+
+.software-links a span {
+color: var(--terminal-green);
+transition: transform 140ms ease;
+}
+
+.software-links a:hover,
+.software-links a:focus-visible {
+color: var(--terminal-green-soft);
+}
+
+.software-links a:hover span,
+.software-links a:focus-visible span {
+color: var(--terminal-green-soft);
+transform: translateX(3px);
+}
+
+
+/* ==========================================================
+NAVEGAÇÃO DA PÁGINA
+========================================================== */
+
+.page-navigation a {
+color: var(--terminal-green);
+}
+
+.page-navigation a:hover,
+.page-navigation a:focus-visible {
+color: var(--terminal-green-soft);
+}
+
+
+/* ==========================================================
+TABLETS E CELULARES
+========================================================== */
+
+@media (max-width: 600px) {
+
+.software-item {
+grid-template-columns: 56px minmax(0, 1fr);
+gap: 18px;
+padding: 26px 0;
+}
+
+.software-logo {
+width: 56px;
+height: 56px;
+}
+
+.software-logo img {
+width: 56px;
+height: 56px;
+}
+
+.software-header h2 {
+font-size: 1.3rem;
+}
+
+.software-description,
+.software-reason p {
+font-size: 0.96rem;
+}
+
+.software-links {
+gap: 10px 22px;
+}
+
+}
+
+
+@media (max-width: 420px) {
+
+.software-item {
+display: block;
+}
+
+.software-logo {
+margin-bottom: 16px;
+}
+
+.software-description {
+margin-top: 7px;
+}
+
+.software-reason {
+margin-top: 18px;
+}
+
+.software-platforms {
+margin-top: 16px;
+}
+
+.software-links {
+margin-top: 16px;
+}
+
+}
